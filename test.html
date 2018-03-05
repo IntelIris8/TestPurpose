@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Budgety</title>
+    </head>
+    <body>
+        
+        <div class="top">
+            <div class="car">
+                <div class="time__title">
+                        +    Where do you <span class="time__title">want to go?</span>
+                </div>
+                
+                <div class="drive__value">+ Map Car</div>
+                
+                <div class="budget__income clearfix">
+                    <div class="budget__income--text">you are driving far</div>
+                    <div class="right">
+                        <div class="budget__income--value">+Having fun?</div>
+                        <div class="budget__income--percentage">&nbsp;</div>
+                    </div>
+                </div>
+                
+                <div class="budget__expenses clearfix">
+                    <div class="budget__expenses--text">distance</div>
+                    <div class="right clearfix">What Country</div>
+                        <div class="budget__expenses--percentage"> state</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="bottom">
+            <div class="add">
+                <div class="add__container">
+                    <select class="add__type">
+                        <option value="inc" selected>Bike</option>
+                        <option value="exp">Car</option>
+                        <option value="exp">Penguin</option>
+                        <option value="exp">walk</option>
+                    </select>
+                    <input type="text" class="add__description" placeholder="Transportation">
+                    <input type="number" class="add__value" placeholder="When">
+                    <select class="add__type">
+                        <option value="inc" selected>Hong Kong</option>
+                        <option value="exp">Singapore</option>
+                        <option value="exp">Neptune</option>
+                        <option value="exp">Pluto</option>
+                    </select>
+                    <button class="add__btn"><i class="ion-ios-checkmark-outline"></i></button>
+                </div>
+            </div>
+
+            
+            <div class="container clearfix">
+                <div class="income">
+                    <h2 class="icome__title">Where too?</h2>
+                    
+                    <div class="income__list">
+                       
+
+                        
+                    </div>
+                </div>
+                
+                
+                
+                <div class="expenses">
+                    <h2 class="expenses__title">Google Map</h2>
+                    <html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+  <body>
+    <h3>Let's find you!</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 60.363, lng: 70.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5jTvTeq9SWnaWw-9a7p1E75ro6Gij26Q&callback=initMap">
+    </script>
+  </body>
+</html>
+                    
+                    <div class="expenses__list">
+                       
+             
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        
+        <script src="app.js"></script>
+    </body>
+</html>
