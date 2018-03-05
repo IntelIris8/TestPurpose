@@ -12,23 +12,23 @@
         <div class="top">
             <div class="car">
                 <div class="time__title">
-                        +    Where do you <span class="time__title">want to go?</span>
+                           For the fast traveller. <span class="time__title"></span>
                 </div>
                 
-                <div class="drive__value">+ Map Car</div>
+                <div class="drive__value"> Map Car</div>
                 
                 <div class="budget__income clearfix">
-                    <div class="budget__income--text">you are driving far</div>
+                    <div class="budget__income--text">Don't Have A Car?</div>
                     <div class="right">
-                        <div class="budget__income--value">+Having fun?</div>
+                        <div class="budget__income--value">We Got You Covered!</div>
                         <div class="budget__income--percentage">&nbsp;</div>
                     </div>
                 </div>
                 
                 <div class="budget__expenses clearfix">
-                    <div class="budget__expenses--text">distance</div>
-                    <div class="right clearfix">What Country</div>
-                        <div class="budget__expenses--percentage"> state</div>
+                    <div class="budget__expenses--text">Have To Leave Soon?</div>
+                    <div class="right clearfix">We Can Pick You Up!</div>
+                        <div class="budget__expenses--percentage"></div>
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
             
             <div class="container clearfix">
                 <div class="income">
-                    <h2 class="icome__title">Where too?</h2>
+                    <h2 class="icome__title">Credit or Crypto</h2>
 
                     
                     <div class="income__list">
@@ -72,7 +72,85 @@
   <img alt="" src="https://paypalobjects.com/en_US/i/scr/pixel.gif"
     width="1" height="1">
 </form>
-                       
+               <section>
+<form id=payment>
+    <fieldset>
+        <ol>
+            <li>
+                <label for=name>Name</label>
+ 
+                <input id=name name=name type=text placeholder="First and last name" required autofocus />
+            </li>
+            <li>
+                <label for=email>Email</label>
+                <input id=email name=email type=email placeholder="example@domain.com" required />
+            </li>
+            <li>
+                <label for=phone>Phone</label>
+                <input id=phone name=phone type=tel placeholder="Eg. +1234567789" required />
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Delivery address</legend>
+        <ol>
+            <li>
+                <label for=address>Address</label>
+                <textarea id=address name=address rows=5 required>
+                </textarea>
+            </li>
+            <li>
+                <label for=postcode>Post Code</label>
+                <input id=postcode name=postcode type=text required />
+ 
+            </li>
+            <li>
+                <label for=country>Country</label>
+                <input id=country name=country type=text required />
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Card Details</legend>
+        <ol>
+            <li>
+            <fieldset>
+                <legend>Card Type</legend>
+                <ol>
+                    <li>
+                        <input id=visa name=cardtype type=radio />
+                        <label for=visa>VISA</label>
+                    </li>
+                    <li>
+                        <input id=amex name=cardtype type=radio />
+                        <label for=amex>AmEx</label>
+                    </li>
+                    <li>
+                        <input id=mastercard name=cardtype type=radio />
+                        <label for=mastercard>Mastercard</label>
+                    </li>
+                </ol>
+            </fieldset>
+            </li>
+            <li>
+                <label for=cardnumber>Card Number</label>
+                <input id=cardnumber name=cardnumber type=number required />
+            </li>
+            <li>
+                <label for=secure>Security Code</label>
+                <input id=secure name=secure type=number required />
+            </li>
+            <li>
+                <label for=namecard>Name on Card</label>
+                <input id=namecard name=namecard type=text placeholder="Exact name as on the card" required />
+            </li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <button type=submit>Buy It!</button>
+    </fieldset>
+</form>
+</section>        
 
                         
                     </div>
