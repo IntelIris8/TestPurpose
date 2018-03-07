@@ -1,4 +1,7 @@
 {
   "name": "",
-  "version": ""
+  "version": "",
+  "dependencies": {
+    "node": "^9.7.0"
+  }
 }
