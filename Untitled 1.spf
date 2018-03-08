@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ContentFilters</key>
+	<dict/>
+	<key>auto_connect</key>
+	<true/>
+	<key>data</key>
+	<dict>
+		<key>connection</key>
+		<dict>
+			<key>host</key>
+			<string>127.0.0.1</string>
+			<key>name</key>
+			<string>mapcar</string>
+			<key>rdbms_type</key>
+			<string>mysql</string>
+			<key>sslCACertFileLocation</key>
+			<string></string>
+			<key>sslCACertFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslCertificateFileLocation</key>
+			<string></string>
+			<key>sslCertificateFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>sslKeyFileLocation</key>
+			<string></string>
+			<key>sslKeyFileLocationEnabled</key>
+			<integer>0</integer>
+			<key>type</key>
+			<string>SPTCPIPConnection</string>
+			<key>useSSL</key>
+			<integer>0</integer>
+			<key>user</key>
+			<string>root</string>
+		</dict>
+		<key>session</key>
+		<dict>
+			<key>connectionEncoding</key>
+			<string>utf8</string>
+			<key>contentPageNumber</key>
+			<integer>1</integer>
+			<key>contentSelection</key>
+			<data>
+			YnBsaXN0MDDUAQIDBAUGJCVYJHZlcnNpb25YJG9iamVjdHNZJGFy
+			Y2hpdmVyVCR0b3ASAAGGoKgHCBMUFRYaIVUkbnVsbNMJCgsMDxJX
+			TlMua2V5c1pOUy5vYmplY3RzViRjbGFzc6INDoACgAOiEBGABIAF
+			gAdUdHlwZVRyb3dzXxAdU2VsZWN0aW9uRGV0YWlsVHlwZU5TSW5k
+			ZXhTZXTSFwsYGVxOU1JhbmdlQ291bnQQAIAG0hscHR5aJGNsYXNz
+			bmFtZVgkY2xhc3Nlc1pOU0luZGV4U2V0oh8gWk5TSW5kZXhTZXRY
+			TlNPYmplY3TSGxwiI1xOU0RpY3Rpb25hcnmiIiBfEA9OU0tleWVk
+			QXJjaGl2ZXLRJidUZGF0YYABAAgAEQAaACMALQAyADcAQABGAE0A
+			VQBgAGcAagBsAG4AcQBzAHUAdwB8AIEAoQCmALMAtQC3ALwAxwDQ
+			ANsA3gDpAPIA9wEEAQcBGQEcASEAAAAAAAACAQAAAAAAAAAoAAAA
+			AAAAAAAAAAAAAAABIw==
+			</data>
+			<key>contentSortColIsAsc</key>
+			<true/>
+			<key>contentViewport</key>
+			<string>{{0, 0}, {694, 450}}</string>
+			<key>isToolbarVisible</key>
+			<true/>
+			<key>queries</key>
+			<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 5, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car", 1, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike",  2, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chantelle", "Pluto", "Walk", 3, FALSE);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+
+
+SELECT * FROM transportation;
+</string>
+			<key>view</key>
+			<string>SP_VIEW_CUSTOMQUERY</string>
+			<key>windowVerticalDividerPosition</key>
+			<real>294</real>
+		</dict>
+	</dict>
+	<key>encrypted</key>
+	<false/>
+	<key>format</key>
+	<string>connection</string>
+	<key>queryFavorites</key>
+	<array/>
+	<key>queryHistory</key>
+	<array>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 5, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car", 1, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike",  2, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chantelle", "Pluto", "Walk", 3, FALSE);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 3;
+SELECT * FROM transportation</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car", 1, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike",  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chantelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 3;
+SELECT * FROM transportation</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car", 1, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike",  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chantelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+SELECT * FROM transportation</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car", 1, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chantelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+SELECT * FROM transportation</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car" 1, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chantelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+SELECT * FROM transportation</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car" 3, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chentelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+SELECT * FROM transportation</string>
+		<string>Creates new rows containing data in all named columns --
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car" 3, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Chentelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+SELECT * FROM transportation</string>
+		<string>-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+)</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+);
+-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (trans_bike, hong_kong, how_many)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (trans_car, singa_pore, how_many)
+VALUES ("Bob", "Singapore", "Car" 3, FALSE);
+INSERT INTO transportation (trans_penguin, nep_tune, how_many)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (trans_walk, plu_to, how_many)
+VALUES ("Chentelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1;
+SELECT * FROM transportation</string>
+		<string>-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (trans_bike, hong_kong, how_many)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (trans_car, singa_pore, how_many)
+VALUES ("Bob", "Singapore", "Car" 3, FALSE);
+INSERT INTO transportation (trans_penguin, nep_tune, how_many)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (trans_walk, plu_to, how_many)
+VALUES ("Chentelle", "Pluto", "Walk", FALSE, 1)</string>
+		<string>-- Creates new rows containing data in all named columns --
+INSERT INTO transportation (trans_bike, hong_kong, how_many)
+VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
+INSERT INTO transportation (trans_car, singa_pore, how_many)
+VALUES ("Bob", "Singapore", "Car" 3, FALSE);
+INSERT INTO transportation (trans_penguin, nep_tune, how_many)
+VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
+INSERT INTO transportation (trans_walk, plu_to, how_many)
+VALUES ("Chentelle", "Pluto", "Walk", FALSE, 1);
+-- Updates the row where the column name is Hong Kong --
+UPDATE transportation
+SET hurry = true, 
+WHERE id = 1</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db;
+-- Creates the table "people" within mapcar_db --
+CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+)</string>
+		<string>-- Drops the animals_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db</string>
+		<string>CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  name VARCHAR(30) NOT NULL,
+
+  place VARCHAR(30) NOT NULL,
+  
+  vehicle VARCHAR(30) NOT NULL,
+  
+  how_many INTEGER(10),
+  
+  hurry BOOLEAN NOT NULL,
+  PRIMARY KEY (id)
+)</string>
+		<string>CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  name VARCHAR(30) NOT NULL,
+  trans_bike VARCHAR(30) NOT NULL,
+  trans_car VARCHAR(30) NOT NULL,
+  trans_penguin VARCHAR(30) NOT NULL,
+  trans_walk VARCHAR(30) NOT NULL,
+  hong_kong BOOLEAN NOT NULL,
+  singa_pore BOOLEAN NOT NULL,
+  nep_tune BOOLEAN NOT NULL,
+  plu_to BOOLEAN NOT NULL,</string>
+		<string>CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  trans_bike VARCHAR(30) NOT NULL,
+  trans_car VARCHAR(30) NOT NULL,
+  trans_penguin VARCHAR(30) NOT NULL,
+  trans_walk VARCHAR(30) NOT NULL,
+  hong_kong BOOLEAN NOT NULL,
+  singa_pore BOOLEAN NOT NULL,
+  nep_tune BOOLEAN NOT NULL,
+  plu_to BOOLEAN NOT NULL,</string>
+		<string>trans_bike VARCHAR(30) NOT NULL,
+  trans_car VARCHAR(30) NOT NULL,
+  trans_penguin VARCHAR(30) NOT NULL,
+  trans_walk VARCHAR(30) NOT NULL,
+  hong_kong BOOLEAN NOT NULL,
+  singa_pore BOOLEAN NOT NULL,
+  nep_tune BOOLEAN NOT NULL,
+  plu_to BOOLEAN NOT NULL,</string>
+		<string>CREATE TABLE transportation (
+  id INTEGER(11) AUTO_INCREMENT NOT NULL,
+  -- Makes 4 string columns called trans_ which cannot contain null --
+  trans_bike VARCHAR(30) NOT NULL,
+  trans_car VARCHAR(30) NOT NULL,
+  trans_penguin VARCHAR(30) NOT NULL,
+  trans_walk VARCHAR(30) NOT NULL,
+  -- Makes 4 boolean columns called destination split which cannot contain null --</string>
+		<string>-- Drops the mapcar_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db;
+-- Makes it so all of the following code will affect mapcar_db --
+USE mapcar_db</string>
+		<string>-- Drops the mapcar_db if it exists currently --
+DROP DATABASE IF EXISTS mapcar_db;
+-- Creates the "map_car" database --
+CREATE DATABASE mapcar_db</string>
+	</array>
+	<key>rdbms_type</key>
+	<string>mysql</string>
+	<key>rdbms_version</key>
+	<string>5.7.18</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
+</plist>

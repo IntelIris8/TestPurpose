@@ -20,13 +20,13 @@ CREATE TABLE transportation (
   PRIMARY KEY (id)
 );
 -- Creates new rows containing data in all named columns --
-INSERT INTO transportation (trans_bike, hong_kong, how_many)
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
 VALUES ("Tom", "Hong Kong", "Penguin", 1, TRUE);
-INSERT INTO transportation (trans_car, singa_pore, how_many)
-VALUES ("Bob", "Singapore", "Car" 3, FALSE);
-INSERT INTO transportation (trans_penguin, nep_tune, how_many)
-VALUES ("Jesse", "Neptune", "Bike"  FALSE, 1);
-INSERT INTO transportation (trans_walk, plu_to, how_many)
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Bob", "Singapore", "Car", 3, FALSE);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
+VALUES ("Jesse", "Neptune", "Bike",  FALSE, 1);
+INSERT INTO transportation (name, place, vehicle, how_many, hurry)
 VALUES ("Chentelle", "Pluto", "Walk", FALSE, 1);
 -- Updates the row where the column name is Hong Kong --
 UPDATE transportation
