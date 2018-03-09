@@ -57,11 +57,12 @@
                 </div>
             </div>
 
-                     <div class="container-fluid">
+                     <div style="text-align: center" class="container-fluid">
 
     <button id="Bike">Bike</button>
     <button id="Penguin">Penguin</button>
     <button id="Car">Car</button>
+    <button id="Walk">Walk</button>
     <br>
     <div> Favorite Transportation?:
     <span id="guess"></span>
@@ -193,11 +194,49 @@
           map: map
         });
       }
+      window.onload = startfunction
+
+function startfunction() {
+    //Create an input type dynamically.   
+ 
+   
+
+    var Bike = document.getElementById("Bike");
+
+
+    Bike.onclick = function() { // Note this is a function
+    alert("You really like staying in shape and riding your bike");
+     };
+   
+    var Penguin = document.getElementById("Penguin");
+
+
+    Penguin.onclick = function() { // Note this is a function
+    alert("You may enjoy living in Antarctica");
+     };
+
+
+
+     var Car = document.getElementById("Car");
+
+
+    Car.onclick = function() { // Note this is a function
+    alert("You are a normal person unless your in water.");
+
+    };
+
+    var Walk = document.getElementById("Walk");
+
+
+    Walk.onclick = function() { // Note this is a function
+    alert("You like to walk");
+     };
+   }
     </script>
         <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5jTvTeq9SWnaWw-9a7p1E75ro6Gij26Q&callback=initMap">
     </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/directions/json?&key=AIzaSyC_RdLrKyCxzkoiCAchyv9HyVmkfpQEjvQ&callback=initMap"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/directions/json?&key=AIzaSyC_RdLrKyCxzkoiCAchyv9HyVmkfpQEjvQ&callback=initMap"></script> -->
   </body>
 </html>
 
