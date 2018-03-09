@@ -8,14 +8,14 @@ function startfunction() {
     var Bike = document.getElementById("Bike");
 
 
-    Dan.onclick = function() { // Note this is a function
+    Bike.onclick = function() { //This is the click for 
     alert("2 hours");
      };
    
     var Penguin = document.getElementById("Penguin");
 
 
-    Alex.onclick = function() { // Note this is a function
+    Penguin.onclick = function() { // Note this is a function
     alert("not reasonable");
      };
 
@@ -24,7 +24,7 @@ function startfunction() {
      var Car = document.getElementById("Car");
 
 
-    Bob.onclick = function() { // Note this is a function
+    Car.onclick = function() { // Note this is a function
     alert("12 minutes");
      };
    }
