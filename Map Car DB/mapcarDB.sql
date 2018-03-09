@@ -7,7 +7,7 @@ USE mapcar_db;
 -- Creates the table "people" within mapcar_db --
 CREATE TABLE transportation (
   id INTEGER(11) AUTO_INCREMENT NOT NULL,
-  -- Makes 4 string columns called trans_ which cannot contain null --
+  -- Makes 5 strings for the name, place, vehicle how many and hurry --
   name VARCHAR(30) NOT NULL,
 
   place VARCHAR(30) NOT NULL,
