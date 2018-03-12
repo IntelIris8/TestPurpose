@@ -9,6 +9,7 @@ app.post('/route', (req, res) => {
 	console.log(req);
 
 
+
 	// everything about req
 	// req = {
 	//  	["ROUTE_START_LATITUDE", "ROUTE_START_LONGITUDE"],
@@ -21,12 +22,16 @@ app.post('/route', (req, res) => {
 	// Include the geocoder and inquirer NPM packages
 var geocoder = require("geocoder");
 var inquirer = require("inquirer");
+var token = req.param('token');
+
+res.send(user_id + '' + token + '' + geo);
+
 // Prompt the user to provide location information.
 inquirer.prompt([
-  [
-	["ROUTE_START_LATITUDE", "ROUTE_START_LONGITUDE"],
-	["DROPOFF_LATITUDE_#1", "DROPOFF_LONGITUDE_#1"],
-	
+ [
+	["22.372081", "114.107877"],
+	["22.284419", "114.159510"],
+	["22.326442", "114.167811"]
 ]
 // This stores the users information
 ]).then(function(location) {
